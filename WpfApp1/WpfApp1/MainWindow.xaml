@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid Margin="10,-555,-8,1" HorizontalAlignment="Left" Width="790">
+    <Grid x:Name="plus" Margin="10,-555,-8,1" HorizontalAlignment="Left" Width="790">
         <Grid.RowDefinitions>
             <RowDefinition Height="483*"/>
             <RowDefinition Height="491*"/>
@@ -21,6 +21,10 @@
         <Button x:Name="b2_Copy3" Content="8" HorizontalAlignment="Left" Margin="229,227,0,0" VerticalAlignment="Top" Width="93" Height="93" FontSize="40" RenderTransformOrigin="1.286,1.294" Grid.Row="1"/>
         <Button x:Name="b2_Copy4" Content="9" HorizontalAlignment="Left" Margin="382,227,0,0" VerticalAlignment="Top" Width="93" Height="93" FontSize="40" RenderTransformOrigin="1.286,1.294" Grid.Row="1"/>
         <Button x:Name="b2_Copy5" Content="0" HorizontalAlignment="Left" Margin="229,364,0,0" VerticalAlignment="Top" Width="93" Height="93" FontSize="40" RenderTransformOrigin="1.286,1.294" Grid.Row="1"/>
+        <Button x:Name="plus1" Content="+" HorizontalAlignment="Left" Height="120" Margin="587,394,0,0" VerticalAlignment="Top" Width="120" FontSize="40" Grid.RowSpan="2"/>
+        <Button x:Name="minus" Content="-" HorizontalAlignment="Left" Height="120" Margin="587,49,0,0" VerticalAlignment="Top" Width="120" FontSize="40" Grid.Row="1"/>
+        <Button x:Name="umnojenie" Content="*" HorizontalAlignment="Left" Height="120" Margin="587,184,0,0" VerticalAlignment="Top" Width="120" FontSize="40" Grid.Row="1"/>
+        <Button x:Name="delenie" Content="/" HorizontalAlignment="Left" Height="120" Margin="587,325,0,0" VerticalAlignment="Top" Width="120" FontSize="40" Grid.Row="1"/>
 
     </Grid>
 </Window>
