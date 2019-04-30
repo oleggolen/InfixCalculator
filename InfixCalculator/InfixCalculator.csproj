@@ -50,6 +50,7 @@
     <Compile Include="Interfaces\IExpressionElement.cs" />
     <Compile Include="Operands\IOperand.cs" />
     <Compile Include="Brackets\CloseBracket.cs" />
+    <Compile Include="Operations\Cos.cs" />
     <Compile Include="Operations\Divide.cs" />
     <Compile Include="Brackets\IBracket.cs" />
     <Compile Include="Operations\IOperation.cs" />
