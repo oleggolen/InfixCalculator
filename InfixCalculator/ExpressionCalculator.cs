@@ -10,7 +10,7 @@ namespace InfixCalculator
 {
     class ExpressionCalculator
     {
-        private readonly IFactory _factory; // какое-то изменение
+        private readonly IFactory _factory;
         public ExpressionCalculator()
         {
             _factory = new Factory.Factory();
