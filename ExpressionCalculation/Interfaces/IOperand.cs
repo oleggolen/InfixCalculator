@@ -1,6 +1,4 @@
-﻿using InfixCalculator.Interfaces;
-
-namespace InfixCalculator.Operands
+﻿namespace ExpressionCalculation.Interfaces
 {
     /// <summary>
     /// Интерфейс, представляющий собой интерфейс объекта-операнда, то есть числел, над которыми совершаются операции

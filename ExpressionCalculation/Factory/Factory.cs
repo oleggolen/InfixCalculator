@@ -1,13 +1,15 @@
 ﻿using System;
-using InfixCalculator.Brackets;
-using InfixCalculator.Operands;
-using InfixCalculator.Operations;
-namespace InfixCalculator.Factory
+using ExpressionCalculation.Brackets;
+using ExpressionCalculation.Interfaces;
+using ExpressionCalculation.Operands;
+using ExpressionCalculation.Operations;
+
+namespace ExpressionCalculation.Factory
 {
     /// <summary>
     /// Класс, представляющий собой реализацию фабрики объектов
     /// </summary>
-    public class Factory : IFactory
+    internal class Factory : IFactory
     {
         /// <summary>
         /// Метод, возвращающий объект-скобку
@@ -30,6 +32,7 @@ namespace InfixCalculator.Factory
             return new Operand(float.Parse(operand));
 
         }
+
         /// <summary>
         /// Метод, создающий объект-операцию
         /// </summary>
@@ -46,9 +49,9 @@ namespace InfixCalculator.Factory
                 case "u-": return new UnaryMinus();
                 case "sin": return new Sin();
                 case "cos": return new Cos();
-                default: throw  new InvalidOperationException("operation не является операцией");
+                default: throw new InvalidOperationException("operation не является операцией");
             }
-            
+
         }
     }
 }

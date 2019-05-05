@@ -1,17 +1,16 @@
 ﻿using System.Collections.Generic;
 using System.Text;
-using InfixCalculator.Brackets;
-using InfixCalculator.Factory;
-using InfixCalculator.Interfaces;
-using InfixCalculator.Operands;
-using InfixCalculator.Operations;
+using ExpressionCalculation.Brackets;
+using ExpressionCalculation.Factory;
+using ExpressionCalculation.Interfaces;
+using ExpressionCalculation.Operands;
 
-namespace InfixCalculator
+namespace ExpressionCalculation
 {
     /// <summary>
     /// Класс, реализующий логику вычисления выражения
     /// </summary>
-    class ExpressionCalculator
+    public class ExpressionCalculator : IExpressionCalculator
     {
         /// <summary>
         /// Фабрика объектов, которая создаёт объекты-операции

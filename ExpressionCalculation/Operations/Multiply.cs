@@ -1,19 +1,20 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using InfixCalculator.Operands;
+using ExpressionCalculation.Interfaces;
+using ExpressionCalculation.Operands;
 
-namespace InfixCalculator.Operations
+namespace ExpressionCalculation.Operations
 {
     /// <summary>
-    /// Класс, представляющий собой реализацию математической операции вычисления разности двух чисел
+    /// Класс, представляющий собой реализацию математической операции вычисления произведения двух чисел
     /// </summary>
-    public class Minus : IOperation
+    public class Multiply : IOperation
     {
         /// <summary>
-        /// Приоритет операции равнй двум
+        /// Приоритет операции равнй трём
         /// </summary>
-        public int Priority => 2;
+        public int Priority => 3;
         /// <summary>
         /// Коллекция операндов у операции, содержащего ровно 2 операнда
         /// </summary>
@@ -23,22 +24,22 @@ namespace InfixCalculator.Operations
         /// </summary>
         public int OperandsCount => 2;
         /// <summary>
-        /// Конструктор, инициализирующий объект операции взятия разности двух чисел и создающий коллекцию операндов
+        /// Конструктор, инициализирующий объект операции вычисления произведения двух чисел и создающий коллекцию операндов
         /// </summary>
-        public Minus()
+        public Multiply()
         {
-            Operands = new List<IOperand>();
+            Operands= new List<IOperand>();
         }
         /// <summary>
-        /// Метод, выполняющий вычесление разности над 2 объектамм, содержащимся в коллекции Operands
+        /// Метод, выполняющий вычесление произведения над 2 объектамм, содержащимся в коллекции Operands
         /// </summary>
-        /// <returns>Объект типа IOperand, в котором хранится результат вычисления разности чисел</returns>
+        /// <returns>Объект типа IOperand, в котором хранится результат вычисления произведения двух чисел</returns>
         /// <exception cref="InvalidOperationException">Происходит, если операция Operands не содержит операндов или является null или первый или второй операнд является null</exception>
         public IOperand Execute()
         {
             if (Operands == null || !Operands.Any()) throw new InvalidOperationException("Нельзя выполнить операцию без операндов");
             if (Operands[0] == null || Operands[1] == null) throw new InvalidOperationException("Один из операндов пуст или не существует");
-            return new Operand(Operands[1].Value - Operands[0].Value);
+            return new Operand(Operands[0].Value * Operands[1].Value);
         }
     }
 }

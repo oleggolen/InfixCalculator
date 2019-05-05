@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A2151330-3B42-4E7C-80E4-7B312CD7F0EC}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>InfixCalculator</RootNamespace>
-    <AssemblyName>InfixCalculator</AssemblyName>
+    <ProjectGuid>{547C29F4-4269-4623-9B80-CE3C7B895CBA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ExpressionCalculation</RootNamespace>
+    <AssemblyName>ExpressionCalculation</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,10 +21,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -44,22 +41,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Brackets\CloseBracket.cs" />
+    <Compile Include="Interfaces\IBracket.cs" />
+    <Compile Include="Brackets\OpenBracket.cs" />
+    <Compile Include="ExpressionCalculator.cs" />
+    <Compile Include="ExpressionFileReader.cs" />
+    <Compile Include="ExpressionValidator.cs" />
+    <Compile Include="Factory\Factory.cs" />
+    <Compile Include="Interfaces\IFactory.cs" />
+    <Compile Include="Interfaces\IExpressionCalculator.cs" />
+    <Compile Include="Interfaces\IExpressionElement.cs" />
+    <Compile Include="Interfaces\IExpressionFileReader.cs" />
+    <Compile Include="Interfaces\IExpressionValidator.cs" />
+    <Compile Include="Interfaces\IOperation.cs" />
+    <Compile Include="Interfaces\IOperand.cs" />
+    <Compile Include="Operands\Operand.cs" />
+    <Compile Include="Operations\Cos.cs" />
+    <Compile Include="Operations\Divide.cs" />
+    <Compile Include="Operations\Minus.cs" />
+    <Compile Include="Operations\Multiply.cs" />
+    <Compile Include="Operations\Plus.cs" />
+    <Compile Include="Operations\Sin.cs" />
+    <Compile Include="Operations\UnaryMinus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ExpressionCalculation\ExpressionCalculation.csproj">
-      <Project>{547c29f4-4269-4623-9b80-ce3c7b895cba}</Project>
-      <Name>ExpressionCalculation</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="test.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

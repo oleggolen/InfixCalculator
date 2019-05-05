@@ -2,14 +2,15 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using ExpressionCalculation.Interfaces;
 
-namespace InfixCalculator
+namespace ExpressionCalculation
 {
     /// <summary>
 	/// класс-читатель выражения из файла
 	/// </summary>
 	/// Autor:Oleg Golenischev
-    internal class ExpressionFileReader
+    public class ExpressionFileReader : IExpressionFileReader
     {
         /// <summary>
         /// Поле содержащее, коллекцию допустимых символов для записи выражений

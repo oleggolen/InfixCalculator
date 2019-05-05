@@ -1,9 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using InfixCalculator.Operands;
+using ExpressionCalculation.Interfaces;
+using ExpressionCalculation.Operands;
 
-namespace InfixCalculator.Operations
+namespace ExpressionCalculation.Operations
 {
     /// <summary>
     /// Класс, представляющий собой реализацию математической операции синуса числа
@@ -34,7 +35,7 @@ namespace InfixCalculator.Operations
         /// </summary>
         /// <returns>Объект типа IOperand, в котором хранится результат вычисления синуса числа</returns>
         /// <exception cref="InvalidOperationException">Происходит, если операция Operands не содержит операндов или является null или первый операнд является null</exception>
-        public InfixCalculator.Operands.IOperand Execute()
+        public IOperand Execute()
         {
             if (Operands == null || !Operands.Any()) throw new InvalidOperationException("Нельзя выполнить операцию без операндов");
             if (Operands[0] == null) throw new InvalidOperationException("Один из операндов пуст или не существует");

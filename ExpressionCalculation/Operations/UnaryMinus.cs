@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using InfixCalculator.Operands;
-namespace InfixCalculator.Operations
+using ExpressionCalculation.Interfaces;
+using ExpressionCalculation.Operands;
+
+namespace ExpressionCalculation.Operations
 {
     /// <summary>
     /// Класс, представляющий собой реализацию математической операции унарного минуса числа, то есть взятия числа с противоположным знаком

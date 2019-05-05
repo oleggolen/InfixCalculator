@@ -1,8 +1,4 @@
-﻿using InfixCalculator.Brackets;
-using InfixCalculator.Operands;
-using InfixCalculator.Operations;
-
-namespace InfixCalculator.Factory
+﻿namespace ExpressionCalculation.Interfaces
 {
     /// <summary>
     /// Интерфейс, представляющий интерфейс фабрики объектов

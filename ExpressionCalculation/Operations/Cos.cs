@@ -1,9 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using InfixCalculator.Operands;
+using ExpressionCalculation.Interfaces;
+using ExpressionCalculation.Operands;
 
-namespace InfixCalculator.Operations
+namespace ExpressionCalculation.Operations
 {
     /// <summary>
     ///  ласс, представл€ющий собой реализацию математической операции косинуса числа

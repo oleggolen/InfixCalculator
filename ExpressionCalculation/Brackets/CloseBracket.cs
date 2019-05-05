@@ -1,4 +1,6 @@
-﻿namespace InfixCalculator.Brackets
+﻿using ExpressionCalculation.Interfaces;
+
+namespace ExpressionCalculation.Brackets
 {
     /// <summary>
     /// Класс, представляющий собой объекты - закрывающиеся скобки

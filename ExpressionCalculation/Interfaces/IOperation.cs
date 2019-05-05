@@ -1,8 +1,6 @@
 using System.Collections.Generic;
-using InfixCalculator.Interfaces;
-using InfixCalculator.Operands;
 
-namespace InfixCalculator.Operations
+namespace ExpressionCalculation.Interfaces
 {
     /// <summary>
     /// »нтерфейс, представл€ющий интерфейс объекта-операции, то есть объекта совершающего вычисление над операндами

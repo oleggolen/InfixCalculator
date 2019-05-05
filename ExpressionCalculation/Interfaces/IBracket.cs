@@ -1,6 +1,4 @@
-﻿using InfixCalculator.Interfaces;
-
-namespace InfixCalculator.Brackets
+﻿namespace ExpressionCalculation.Interfaces
 {
     /// <summary>
     /// Интерфейст, представляющий собой интерфейс объектов-скобок

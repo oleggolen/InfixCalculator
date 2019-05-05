@@ -1,4 +1,6 @@
-﻿namespace InfixCalculator.Operands
+﻿using ExpressionCalculation.Interfaces;
+
+namespace ExpressionCalculation.Operands
 {
     /// <summary>
     /// Класс представляющий собой класс объектов-операндов, то есть объектов над которыми совершаются операции

@@ -1,4 +1,4 @@
-﻿namespace InfixCalculator.Interfaces
+﻿namespace ExpressionCalculation.Interfaces
 {
     /// <summary>
     /// Интерфейс, представляющий собой элемент выражения
