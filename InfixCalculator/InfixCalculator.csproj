@@ -50,6 +50,7 @@
     <Compile Include="Interfaces\IExpressionElement.cs" />
     <Compile Include="Operands\IOperand.cs" />
     <Compile Include="Brackets\CloseBracket.cs" />
+    <Compile Include="Operations\Cos.cs" />
     <Compile Include="Operations\Divide.cs" />
     <Compile Include="Brackets\IBracket.cs" />
     <Compile Include="Operations\IOperation.cs" />
@@ -66,6 +67,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="test.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

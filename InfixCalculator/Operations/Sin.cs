@@ -1,29 +1,43 @@
-п»їusing System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using InfixCalculator.Operands;
 
 namespace InfixCalculator.Operations
 {
+    /// <summary>
+    /// Класс, представляющий собой реализацию математической операции синуса числа
+    /// </summary>
     public class Sin : IOperation
     {
+        /// <summary>
+        /// Приоритет операции равнй двум
+        /// </summary>
         public int Priority => 2;
-
+        /// <summary>
+        /// Количество операндов равное 1
+        /// </summary>
         public int OperandsCount => 1;
-
+        /// <summary>
+        /// Коллекция операндов у операции, содержащего ровно 1 операнд
+        /// </summary>
         public IList<IOperand> Operands { get; }
-
+        /// <summary>
+        /// Конструктор, инициализирующий объект операции синуса и создающий коллекцию операндов
+        /// </summary>
         public Sin()
         {
             Operands= new List<IOperand>();
         }
-
-        public IOperand Execute()
+        /// <summary>
+        /// Метод, выполняющий вычесление синуса над 1 объектом, содержащимся в коллекции Operands
+        /// </summary>
+        /// <returns>Объект типа IOperand, в котором хранится результат вычисления синуса числа</returns>
+        /// <exception cref="InvalidOperationException">Происходит, если операция Operands не содержит операндов или является null или первый операнд является null</exception>
+        public InfixCalculator.Operands.IOperand Execute()
         {
-            if (Operands == null || !Operands.Any()) throw new InvalidOperationException("РќРµР»СЊР·СЏ РІС‹РїРѕР»РЅРёС‚СЊ РѕРїРµСЂР°С†РёСЋ Р±РµР· РѕРїРµСЂР°РЅРґРѕРІ");
-            if (Operands[0] == null) throw new InvalidOperationException("РћРґРёРЅ РёР· РѕРїРµСЂР°РЅРґРѕРІ РїСѓСЃС‚ РёР»Рё РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚");
+            if (Operands == null || !Operands.Any()) throw new InvalidOperationException("Нельзя выполнить операцию без операндов");
+            if (Operands[0] == null) throw new InvalidOperationException("Один из операндов пуст или не существует");
             return new Operand((float)Math.Sin(Operands[0].Value));
         }
     }

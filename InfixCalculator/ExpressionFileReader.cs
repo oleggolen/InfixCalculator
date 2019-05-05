@@ -1,23 +1,57 @@
-п»їusing System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace InfixCalculator
 {
     /// <summary>
-    /// РєР»Р°СЃСЃ-С‡РёС‚Р°С‚РµР»СЊ РІС‹СЂР°Р¶РµРЅРёСЏ РёР· С„Р°Р№Р»Р°
-    /// </summary>
+	/// класс-читатель выражения из файла
+	/// </summary>
+	/// Autor:Oleg Golenischev
     internal class ExpressionFileReader
     {
+        /// <summary>
+        /// Поле содержащее, коллекцию допустимых символов для записи выражений
+        /// </summary>
         private readonly HashSet<char> _symbols;
+        /// <summary>
+        /// Поле содержащее коллекцию символов, являющихся операциям
+        /// </summary>
         private readonly HashSet<char> _operations;
-        private  void ValidateExpression(string expression)
+        /// <summary>
+        /// Метод, который осуществляет проверку выражения на корректность
+        /// </summary>
+        /// <param name="expression">Искомое выражение, которое надо проверить на корректность</param>
+        /// <exception cref="ArgumentNullException">происходит в случае, если строка равна null или пуста</exception>
+        /// <exception cref="ArgumentException">Происходит если:
+        /// <list type="bullet">
+        /// <item>
+        /// <term>Строка не является правильной скобочной последовательностью</term>
+        /// <description>Количество открывающихся и закрывающихся скобок в строке не равны</description>
+        /// </item>
+        /// <item>
+        /// <term>Содержит некорректные сиволы</term>
+        /// <description>Содрержит символы, не являющиеся десятичными цифрами, круглыми скобками, сиволы допустимых операций</description>
+        /// </item>
+        /// <item>
+        /// <term>Начинается с операции, кроме унарного минуса или открывающейся круглой скобки</term>
+        /// </item>
+        /// <item>
+        /// <term>содержит число перед открывающейся круглой скобкой</term>
+        /// </item>
+        /// <item>
+        /// <term>содержит число после закрывающейся круглой скобки</term>
+        /// </item>
+        /// <item>
+        ///<term>содержит две бинарных операции подряд</term>
+        /// </item>
+        /// </list>
+        /// </exception>
+        private void ValidateExpression(string expression)
         {
             if (string.IsNullOrEmpty(expression))
-                throw new ArgumentNullException(nameof(expression), "РЎС‚СЂРѕРєР° РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ null РёР»Рё РїСѓСЃС‚РѕР№");
+                throw new ArgumentNullException(nameof(expression), "Строка не может быть null или пустой");
             var depth = 0;
             foreach (var t in expression)
             {
@@ -28,28 +62,29 @@ namespace InfixCalculator
                         break;
                     case ')':
                         depth--;
-                        if(depth<0) throw new ArgumentException("РЎС‚СЂРѕРєР° РґРѕР»Р¶РЅР° Р±С‹С‚СЊ РїСЂР°РІРёР»СЊРЅРѕР№ СЃРєРѕР±РѕС‡РЅРѕР№ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊСЋ");
+                        if(depth<0) throw new ArgumentException("Строка должна быть правильной скобочной последовательностью");
                         break;
                     default:
                         if(!_symbols.Contains(t))
-                            throw new ArgumentException("СЃС‚СЂРѕРєР° СЃРѕРґРµСЂР¶РёС‚ РЅРµРєРѕСЂСЂРµРєС‚РЅС‹Рµ СЃРёРјР±РІРѕР»С‹");
+                            throw new ArgumentException("строка содержит некорректные симбволы");
                         break;
                 }
             }
-            if(depth!=0) throw new ArgumentException("РЎС‚СЂРѕРєР° РґРѕР»Р¶РЅР° Р±С‹С‚СЊ РїСЂР°РІРёР»СЊРЅРѕР№ СЃРєРѕР±РѕС‡РЅРѕР№ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊСЋ");
+            if(depth!=0) throw new ArgumentException("Строка должна быть правильной скобочной последовательностью");
             if(_operations.Contains(expression[0]) && expression[0]!='-' && expression[0]!='(')
-                throw new ArgumentException("РЎС‚СЂРѕРєР° РЅРµ РјРѕР¶РµС‚ РЅР°С‡РёРЅР°С‚СЊСЃСЏ СЃ РѕРїРµСЂР°С†РёР№ РєСЂРѕРјРµ - РёР»Рё (");
+                throw new ArgumentException("Строка не может начинаться с операций кроме - или (");
             while (expression.Length > 1)
             {
                 var index = expression.IndexOfAny(_operations.ToArray());
+                if(index==-1) return;
                 if(index-1>=0 && expression[index]=='(' && !_operations.Contains(expression[index-1]))
-                    throw new Exception("РїРµСЂРµРґ ( РјРѕР¶РµС‚ СЃРѕРґРµСЂР¶Р°С‚СЊСЃСЏ С‚РѕР»СЊРєРѕ РѕРїРµСЂР°С†РёСЏ");
+                    throw new Exception("перед ( может содержаться только операция");
                 if(index+1<expression.Length && expression[index]=='(' && expression[index+1]!='(' && expression[index+1]!='-' && (expression[index+1]<'0' || expression[index+1]>'9'))
-                    throw new ArgumentException("Р’ СЃС‚СЂРѕРєРµ РЅРµ РјРѕР¶РµС‚ СЃРѕРґРµСЂР¶Р°С‚СЊСЃСЏ РґРІРµ РѕРїРµСЂР°С†РёРё РїРѕРґСЂСЏРґ");
+                    throw new ArgumentException("Выражение не может содержать двух операций подряд");
                 if(index+1<expression.Length && expression[index]!='(' && expression[index]!=')' && expression[index+1]!='(' && _operations.Contains(expression[index+1]))
-                    throw new ArgumentException("Р’С‹СЂР°Р¶РµРЅРёРµ РЅРµ РјРѕР¶РµС‚ СЃРѕРґРµСЂР¶Р°С‚СЊ РґРІСѓС… РѕРїРµСЂР°С†РёР№ РїРѕРґСЂСЏРґ");
+                    throw new ArgumentException("Выражение не может содержать двух операций подряд");
                 if(index+1<expression.Length && expression[index]==')' && !_operations.Contains(expression[index+1]))
-                    throw new ArgumentException("РїРѕcР»Рµ ) РјРѕР¶РµС‚ Р±С‹С‚СЊ С‚РѕР»СЊРєРѕ РѕРїРµСЂР°С†РёСЏ");
+                    throw new ArgumentException("поcле ) может быть только операция");
                 expression = index + 1 < expression.Length ? expression.Substring(index + 1) : "";
             }
 
@@ -70,6 +105,8 @@ namespace InfixCalculator
             _symbols.Add('i');
             _symbols.Add('n');
             _symbols.Add(',');
+            _symbols.Add('c');
+            _symbols.Add('o');
             _operations = new HashSet<char>
             {
                 '+',
@@ -78,15 +115,16 @@ namespace InfixCalculator
                 '/',
                 '(',
                 ')',
-                'n'
+                'n',
+                's'
             };
         }
         /// <summary>
-        /// РњРµС‚РѕРґ С‡С‚РµРЅРёСЏ РІС‹СЂР°Р¶РµРЅРёСЏ РёР· С„Р°Р№Р»Р°
+        /// Метод чтения выражения из файла
         /// </summary>
-        /// <param name="filename">РёРјСЏ С„Р°Р№Р»Р°, РёР· РєРѕС‚РѕСЂРѕРіРѕ РЅСѓР¶РЅРѕ РїСЂРѕС‡РёС‚Р°С‚СЊ РІС‹СЂР°Р¶РµРЅРёРµ</param>
-        /// <returns>СЃС‚СЂРѕРєР° РїСЂРµРґСЃС‚Р°РІР»СЏСЋС‰Р°СЏ СЃРѕР±РѕР№ РІС‹СЂР°Р¶РµРЅРёРµ</returns>
-        /// <exception cref="Exception">Р’РѕР·РЅРёРєР°РµС‚ РІ СЃР»СѓС‡Р°Рµ РѕС€РёР±РєРё С‡С‚РµРЅРёСЏ РёР»Рё РЅРµРєРѕСЂСЂРµРєС‚РЅРѕСЃС‚Рё РІС‹СЂР°Р¶РµРЅРёСЏ</exception>
+        /// <param name="filename">имя файла, из которого нужно прочитать выражение</param>
+        /// <returns>строка представляющая собой выражение</returns>
+        /// <exception cref="Exception">Возникает в случае ошибки чтения или некорректности выражения</exception>
         public string ReadExpressionFromFile(string filename)
         {
             string expression = null;
@@ -103,23 +141,23 @@ namespace InfixCalculator
             }
             catch (FileNotFoundException)
             {
-                throw new Exception("Р—Р°РґР°РЅРЅРѕРіРѕ С„Р°Р№Р»Р° РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚");
+                throw new Exception("Заданного файла не существует");
             }
             catch (DirectoryNotFoundException)
             {
-               throw new Exception("Р—Р°РґР°РЅРЅРѕР№ РїР°РїРєРё РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚!");
+               throw new Exception("Заданной папки не существует!");
             }
             catch (ArgumentNullException)
             {
-                throw new Exception("Р—Р°РґР°РЅРЅР°СЏ СЃС‚СЂРѕРєР° РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РїСѓСЃС‚РѕР№");
+                throw new Exception("Заданная строка не может быть пустой");
             }
             catch (ArgumentException)
             {
-                Console.WriteLine("РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ Р°СЂРіСѓРјРµРЅС‚");
+               throw new Exception("Некорректное имя файла");
             }
             catch (PathTooLongException)
             {
-                Console.WriteLine("РРјСЏ С„Р°Р№Р»Р° СЃР»РёС€РєРѕРј РґР»РёРЅРЅРѕРµ!");
+                throw new Exception("Имя файла слишком длинное!");
             }
             ValidateExpression(expression);
             return expression;

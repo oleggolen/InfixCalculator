@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Index</title>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type">
+	<style>
+		html,body {
+			margin: 0; padding: 0px;
+			height:100%; 
+			min-height:100%;
+			background-color: rgb(233,232,220);
+			font-family: Verdana, Arial, Helvetica, sans-serif;
+			font-style: normal;
+			font-weight: normal;
+			color: black;
+		}
+
+		body {font-size:75%;position:relative; margin-top:-1px; border-style: solid solid solid solid;	border-color: rgb(172,168,153);	border-width: 0px 0px 1px 0px;}
+		a { text-decoration:none; color:#06c }
+		form {padding:5px; margin:0px;}
+	</style>
+</head>
+<body style="direction: ltr;">
+	<form>
+	Look for:<br /><input style="width:100%" onKeyDown="check_input(this.value,get_match)" onKeyUp="check_input(this.value,get_match)"/>
+	</form>
+
+	<script>
+		var words = new Array(
+"CloseBracket Class","Cos Class","Cos Constructor","CreateBracket Method {InfixCalculator.Factory.Factory}","CreateBracket Method {InfixCalculator.Factory.IFactory}","CreateOperand Method {InfixCalculator.Factory.Factory}","CreateOperand Method {InfixCalculator.Factory.IFactory}","CreateOperation Method {InfixCalculator.Factory.Factory}","CreateOperation Method {InfixCalculator.Factory.IFactory}","Divide Class","Divide Constructor","Execute Method {InfixCalculator.Operations.Cos}","Execute Method {InfixCalculator.Operations.Divide}","Execute Method {InfixCalculator.Operations.IOperation}","Execute Method {InfixCalculator.Operations.Minus}","Execute Method {InfixCalculator.Operations.Multiply}","Execute Method {InfixCalculator.Operations.Plus}","Execute Method {InfixCalculator.Operations.Sin}","Execute Method {InfixCalculator.Operations.UnaryMinus}","Factory Class","IBracket Interface","IExpressionElement Interface","IFactory Interface","IOperand Interface","IOperation Interface","InfixCalculator Reference","InfixCalculator.Brackets Namespace","InfixCalculator.Factory Namespace","InfixCalculator.Interfaces Namespace","InfixCalculator.Operands Namespace","InfixCalculator.Operations Namespace","Minus Class","Minus Constructor","Multiply Class","Multiply Constructor","OpenBracket Class","Operands Property {InfixCalculator.Operations.Cos}","Operands Property {InfixCalculator.Operations.Divide}","Operands Property {InfixCalculator.Operations.IOperation}","Operands Property {InfixCalculator.Operations.Minus}","Operands Property {InfixCalculator.Operations.Multiply}","Operands Property {InfixCalculator.Operations.Plus}","Operands Property {InfixCalculator.Operations.Sin}","Operands Property {InfixCalculator.Operations.UnaryMinus}","OperandsCount Property {InfixCalculator.Operations.Cos}","OperandsCount Property {InfixCalculator.Operations.Divide}","OperandsCount Property {InfixCalculator.Operations.IOperation}","OperandsCount Property {InfixCalculator.Operations.Minus}","OperandsCount Property {InfixCalculator.Operations.Multiply}","OperandsCount Property {InfixCalculator.Operations.Plus}","OperandsCount Property {InfixCalculator.Operations.Sin}","OperandsCount Property {InfixCalculator.Operations.UnaryMinus}","Plus Class","Plus Constructor","Priority Property {InfixCalculator.Operations.Cos}","Priority Property {InfixCalculator.Operations.Divide}","Priority Property {InfixCalculator.Operations.IOperation}","Priority Property {InfixCalculator.Operations.Minus}","Priority Property {InfixCalculator.Operations.Multiply}","Priority Property {InfixCalculator.Operations.Plus}","Priority Property {InfixCalculator.Operations.Sin}","Priority Property {InfixCalculator.Operations.UnaryMinus}","Sin Class","Sin Constructor","UnaryMinus Class","UnaryMinus Constructor","Value Property"
+		);
+		
+		
+		var oldHighlight = 0;
+		var oldKey = "";
+		
+		function get_match(text) {
+		    var ltext = text.toLowerCase();
+		    for(i in words) {
+		        if(words[i].toLowerCase().indexOf(ltext) == "0") {
+		            return words[i];
+		        }
+		    }
+		    return "";
+		}
+		
+		function highlight(keyword) {
+		    if(oldHighlight) oldHighlight.className = "";
+		    var el = parent.frames['zindex'].document.getElementById("w_"+keyword);
+		    el.className="highlighted";
+		    oldHighlight = el;
+		}
+		
+		function check_input(text, matchfun) {
+		    if(text!=oldKey) {
+		        var keyword = matchfun(text);
+		        if(keyword) {       
+		            highlight(keyword);
+		            parent.frames['zindex'].document.getElementById('w_'+keyword).scrollIntoView();
+		        }
+		        oldKey = text;
+		    }
+		}
+	</script>
+</body>
+</html>
+

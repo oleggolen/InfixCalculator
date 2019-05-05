@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<DynamicHelp xmlns="http://msdn.microsoft.com/vsdata/xsd/vsdh.xsd" xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance" xsi:schemaLocation="http://msdn.microsoft.com/vsdata/xsd/vsdh.xsd">	
+   <LINKGROUP ID="InfixCalculator" Title="InfixCalculator Reference Help" Priority="2100">
+      <GLYPH Expanded="vs:/ctxhelp_show.gif" Collapsed="vs:/ctxhelp_hide.gif"/>
+   </LINKGROUP>
+
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Brackets.CloseBracket" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000001.html" LinkGroup="InfixCalculator">CloseBracket Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Cos" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000014.html" LinkGroup="InfixCalculator">Cos Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Cos.Cos" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000018.html" LinkGroup="InfixCalculator">Cos Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Factory.Factory.CreateBracket" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000007.html" LinkGroup="InfixCalculator">CreateBracket Method {InfixCalculator.Factory.Factory}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Factory.IFactory.CreateBracket" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_000000000000000D.html" LinkGroup="InfixCalculator">CreateBracket Method {InfixCalculator.Factory.IFactory}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Factory.Factory.CreateOperand" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000008.html" LinkGroup="InfixCalculator">CreateOperand Method {InfixCalculator.Factory.Factory}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Factory.IFactory.CreateOperand" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_000000000000000B.html" LinkGroup="InfixCalculator">CreateOperand Method {InfixCalculator.Factory.IFactory}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Factory.Factory.CreateOperation" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000009.html" LinkGroup="InfixCalculator">CreateOperation Method {InfixCalculator.Factory.Factory}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Factory.IFactory.CreateOperation" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_000000000000000C.html" LinkGroup="InfixCalculator">CreateOperation Method {InfixCalculator.Factory.IFactory}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Divide" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_000000000000001A.html" LinkGroup="InfixCalculator">Divide Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Divide.Divide" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_000000000000001E.html" LinkGroup="InfixCalculator">Divide Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Cos.Execute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000019.html" LinkGroup="InfixCalculator">Execute Method {InfixCalculator.Operations.Cos}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Divide.Execute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_000000000000001F.html" LinkGroup="InfixCalculator">Execute Method {InfixCalculator.Operations.Divide}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.IOperation.Execute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000024.html" LinkGroup="InfixCalculator">Execute Method {InfixCalculator.Operations.IOperation}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Minus.Execute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_000000000000002A.html" LinkGroup="InfixCalculator">Execute Method {InfixCalculator.Operations.Minus}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Multiply.Execute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000030.html" LinkGroup="InfixCalculator">Execute Method {InfixCalculator.Operations.Multiply}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Plus.Execute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000036.html" LinkGroup="InfixCalculator">Execute Method {InfixCalculator.Operations.Plus}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Sin.Execute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_000000000000003C.html" LinkGroup="InfixCalculator">Execute Method {InfixCalculator.Operations.Sin}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.UnaryMinus.Execute" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000042.html" LinkGroup="InfixCalculator">Execute Method {InfixCalculator.Operations.UnaryMinus}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Factory.Factory" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000006.html" LinkGroup="InfixCalculator">Factory Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Brackets.IBracket" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000002.html" LinkGroup="InfixCalculator">IBracket Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Interfaces.IExpressionElement" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_000000000000000F.html" LinkGroup="InfixCalculator">IExpressionElement Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Factory.IFactory" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_000000000000000A.html" LinkGroup="InfixCalculator">IFactory Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operands.IOperand" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000011.html" LinkGroup="InfixCalculator">IOperand Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.IOperation" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000020.html" LinkGroup="InfixCalculator">IOperation Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator Reference" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000043.html" LinkGroup="InfixCalculator">InfixCalculator Reference</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Brackets" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000000.html" LinkGroup="InfixCalculator">InfixCalculator.Brackets Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Factory" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000005.html" LinkGroup="InfixCalculator">InfixCalculator.Factory Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Interfaces" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_000000000000000E.html" LinkGroup="InfixCalculator">InfixCalculator.Interfaces Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operands" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000010.html" LinkGroup="InfixCalculator">InfixCalculator.Operands Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000013.html" LinkGroup="InfixCalculator">InfixCalculator.Operations Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Minus" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000025.html" LinkGroup="InfixCalculator">Minus Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Minus.Minus" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000029.html" LinkGroup="InfixCalculator">Minus Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Multiply" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_000000000000002B.html" LinkGroup="InfixCalculator">Multiply Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Multiply.Multiply" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_000000000000002F.html" LinkGroup="InfixCalculator">Multiply Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Brackets.OpenBracket" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000003.html" LinkGroup="InfixCalculator">OpenBracket Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Cos.Operands" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000017.html" LinkGroup="InfixCalculator">Operands Property {InfixCalculator.Operations.Cos}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Divide.Operands" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_000000000000001D.html" LinkGroup="InfixCalculator">Operands Property {InfixCalculator.Operations.Divide}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.IOperation.Operands" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000023.html" LinkGroup="InfixCalculator">Operands Property {InfixCalculator.Operations.IOperation}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Minus.Operands" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000027.html" LinkGroup="InfixCalculator">Operands Property {InfixCalculator.Operations.Minus}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Multiply.Operands" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_000000000000002D.html" LinkGroup="InfixCalculator">Operands Property {InfixCalculator.Operations.Multiply}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Plus.Operands" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000033.html" LinkGroup="InfixCalculator">Operands Property {InfixCalculator.Operations.Plus}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Sin.Operands" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_000000000000003A.html" LinkGroup="InfixCalculator">Operands Property {InfixCalculator.Operations.Sin}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.UnaryMinus.Operands" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000040.html" LinkGroup="InfixCalculator">Operands Property {InfixCalculator.Operations.UnaryMinus}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Cos.OperandsCount" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000016.html" LinkGroup="InfixCalculator">OperandsCount Property {InfixCalculator.Operations.Cos}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Divide.OperandsCount" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_000000000000001C.html" LinkGroup="InfixCalculator">OperandsCount Property {InfixCalculator.Operations.Divide}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.IOperation.OperandsCount" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000022.html" LinkGroup="InfixCalculator">OperandsCount Property {InfixCalculator.Operations.IOperation}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Minus.OperandsCount" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000028.html" LinkGroup="InfixCalculator">OperandsCount Property {InfixCalculator.Operations.Minus}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Multiply.OperandsCount" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_000000000000002E.html" LinkGroup="InfixCalculator">OperandsCount Property {InfixCalculator.Operations.Multiply}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Plus.OperandsCount" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000034.html" LinkGroup="InfixCalculator">OperandsCount Property {InfixCalculator.Operations.Plus}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Sin.OperandsCount" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000039.html" LinkGroup="InfixCalculator">OperandsCount Property {InfixCalculator.Operations.Sin}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.UnaryMinus.OperandsCount" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_000000000000003F.html" LinkGroup="InfixCalculator">OperandsCount Property {InfixCalculator.Operations.UnaryMinus}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Plus" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000031.html" LinkGroup="InfixCalculator">Plus Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Plus.Plus" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000035.html" LinkGroup="InfixCalculator">Plus Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Cos.Priority" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000015.html" LinkGroup="InfixCalculator">Priority Property {InfixCalculator.Operations.Cos}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Divide.Priority" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_000000000000001B.html" LinkGroup="InfixCalculator">Priority Property {InfixCalculator.Operations.Divide}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.IOperation.Priority" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000021.html" LinkGroup="InfixCalculator">Priority Property {InfixCalculator.Operations.IOperation}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Minus.Priority" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000026.html" LinkGroup="InfixCalculator">Priority Property {InfixCalculator.Operations.Minus}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Multiply.Priority" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_000000000000002C.html" LinkGroup="InfixCalculator">Priority Property {InfixCalculator.Operations.Multiply}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Plus.Priority" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000032.html" LinkGroup="InfixCalculator">Priority Property {InfixCalculator.Operations.Plus}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Sin.Priority" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000038.html" LinkGroup="InfixCalculator">Priority Property {InfixCalculator.Operations.Sin}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.UnaryMinus.Priority" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_000000000000003E.html" LinkGroup="InfixCalculator">Priority Property {InfixCalculator.Operations.UnaryMinus}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Sin" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000037.html" LinkGroup="InfixCalculator">Sin Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.Sin.Sin" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_000000000000003B.html" LinkGroup="InfixCalculator">Sin Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.UnaryMinus" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_000000000000003D.html" LinkGroup="InfixCalculator">UnaryMinus Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operations.UnaryMinus.UnaryMinus" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000041.html" LinkGroup="InfixCalculator">UnaryMinus Constructor</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="InfixCalculator.Operands.IOperand.Value" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:InfixCalculator.chm::/topic_0000000000000012.html" LinkGroup="InfixCalculator">Value Property</LItem>
+      </Links>
+   </Context>
+   
+
+</DynamicHelp>
+
