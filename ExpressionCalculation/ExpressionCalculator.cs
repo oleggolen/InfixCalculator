@@ -1,9 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 using ExpressionCalculation.Brackets;
-using ExpressionCalculation.Factory;
 using ExpressionCalculation.Interfaces;
-using ExpressionCalculation.Operands;
 
 namespace ExpressionCalculation
 {

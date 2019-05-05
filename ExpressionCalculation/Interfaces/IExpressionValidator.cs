@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace ExpressionCalculation.Interfaces
 {
-    interface IExpressionValidator
+    public interface IExpressionValidator
     {
-        bool ValidateExpression(string expression);
+        void ValidateExpression(string expression);
     }
 }
